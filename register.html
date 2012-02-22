@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	    <meta charset="utf-8">
+	    <title>PES - Register</title>
+	    <meta name="description" content="">
+	    <meta name="author" content="Grup 2">
+
+	    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+	    <!--[if lt IE 9]>
+	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+
+	    <!-- Styles -->
+	    <link href="css/bootstrap.css" rel="stylesheet">
+
+	    <!-- Fav and touch icons -->
+	    <link rel="shortcut icon" href="images/favicon.ico">
+	    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	    
+	    
+	    <script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+	    <script src="js/bootstrap-alert.js"
+	    <script src="js/bootstrap.js"></script>
+	</head>
+
+	<body>
+
+		<nav class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href="index.html">Online freelancing</a>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+							<li class="active">
+								<a href="register.html">Register</a>
+							</li>
+							<li>
+								<a href="login.html">Login</a>
+							</li>
+						</ul>
+						<form class="navbar-search pull-left" action>
+							<input type="text" class="search-query span2" placeholder="Search">
+						</form>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<section class="container">
+			<section class="center span8">
+				<h1>Create an account</h1>
+				<div class="alert alert-block alert-success">
+					<p>Already have an account? Sign in using the login bar above, or clicking this button:</p>
+					<p>
+						<a class="btn" href="login.html">Login</a>
+					</p>
+				</div>	
+				<form class="well form-vertical">
+					<label>Name:</label>
+					<input type="text" class="span3" placeholder="Enter your full name">
+					<span class="help-inline">Only alphanumeric characters allowed!</span>
+					
+					<label>Email address:</label>
+					<input type="text" class="span3" placeholder="Email">
+					<span class="help-inline">A confirmation email will be sent to this address</span>
+
+					<label>Password:</label>
+					<input type="password" class="span3" placeholder="Password">
+
+					<label>Password confirmation:</label>
+					<input type="password" class="span3" placeholder="Confirm your password">
+					<div class="input-prepend">
+						<label>Twitter username</label>
+		                <span class="add-on">@</span>
+		                <input class="span2" id="prependedInput" size="16" type="text" placeholder="username">
+	              	</div>
+
+					<label class="checkbox">
+			        	<input type="checkbox">I accept the license and privacy terms
+			        </label>
+
+					<div class="actions">
+						<button type="submit" class="btn btn-success">Submit</button>
+						<button type="reset" value="Reset" class="btn">Reset</button>
+					</div>
+				</form>
+			</section>
+		</section>
+	</body>
+
+</html>
