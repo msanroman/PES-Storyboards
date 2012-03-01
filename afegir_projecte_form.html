@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	    <meta charset="utf-8">
+	    <title>PES - Add Project</title>
+	    <meta name="description" content="">
+	    <meta name="author" content="Grup 2">
+
+	    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+	    <!--[if lt IE 9]>
+	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <![endif]-->
+
+	    <!-- Styles -->
+	    <link href="css/bootstrap.css" rel="stylesheet">
+
+	    <!-- Fav and touch icons -->
+	    
+	    
+	    <script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+	    <script src="js/bootstrap-alert.js"
+	    <script src="js/bootstrap.js"></script>
+	</head>
+
+	<body>
+
+		<nav class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href="index.html">Online freelancing</a>
+					<div class="nav-collapse">
+						<ul class="nav">
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+							<li class="active">
+								<a href="afegir_projecte_form.html">Add Project</a>
+							</li>
+							<li>
+								<a href="#">Log Out</a>
+							</li>
+						</ul>
+						<form class="navbar-search pull-left" action>
+							<input type="text" class="search-query span2" placeholder="Search">
+						</form>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<section class="container">
+			<section class="center span8">
+				<h1>Add a project</h1>
+				<br>
+				<br>
+				<form class="well form-vertical">
+					<label>Title</label>
+					<input type="text" class="span3" placeholder="Enter a name for the project">
+					<span class="help-inline">Only alphanumeric characters allowed!</span>
+					
+					<label>Version</label>
+					<input type="text" class="span3" placeholder="Initial version">
+					<span class="help-inline">Only alphanumeric characters allowed!</span>
+
+					<label>Description</label>
+					<textarea class="input-xxlarge" id="textarea" rows="3" placeholder="Enter a detailed description for the project"></textarea>
+					<span class="help-inline">Only alphanumeric characters allowed!</span>
+					
+					<br>
+					<br>
+					<div id="milestones">
+						<h4>Milestones</h4>
+						<br>
+						<label>Number</label>
+						<input type="number" class="span3" placeholder="Enter a number for this milestone">
+						<span class="help-inline">Only numeric characters allowed!</span>
+						
+						<label>Version</label>
+						<input type="text" class="span3" placeholder="Initial version">
+						<span class="help-inline">Only alphanumeric characters allowed!</span>
+
+						<label>Description</label>
+						<textarea class="input-xxlarge" id="textarea" rows="3" placeholder="Enter a detailed description for the project"></textarea>
+						<span class="help-inline">Only alphanumeric characters allowed!</span>
+					</div>
+					<br>
+					<a id="add_milestone" class="btn btn-warning" href="#"><i class="icon-plus icon-white"></i> Add Milestone</a>
+					<br>
+					<br>
+
+					<div class="actions">
+						<button type="submit" class="btn btn-success">Submit</button>
+						<button type="reset" value="Reset" class="btn">Reset</button>
+					</div>
+				</form>
+			</section>
+		</section>
+	</body>
+<script>
+	$('#add_milestone').click(function(){
+		$('#milestones').after("<h1>miau</h1>");
+	});
+</script>
+</html>
