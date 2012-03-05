@@ -69,20 +69,27 @@
 					<br>
 					<br>
 					<div id="milestones">
-						<h4>Milestones</h4>
-						<br>
-						<label>Number</label>
-						<input type="number" class="span3" placeholder="Enter a number for this milestone">
-						<span class="help-inline">Only numeric characters allowed!</span>
-						
-						<label>Version</label>
-						<input type="text" class="span3" placeholder="Initial version">
-						<span class="help-inline">Only alphanumeric characters allowed!</span>
+						<div id="milestone-1">
+							<h4>Milestones</h4>
+							<br>
+							<label>Number</label>
+							<input type="number" class="span3" placeholder="Enter a number for this milestone">
+							<span class="help-inline">Only numeric characters allowed!</span>
+							
+							<label>Version</label>
+							<input type="text" class="span3" placeholder="Initial version">
+							<span class="help-inline">Only alphanumeric characters allowed!</span>
 
-						<label>Description</label>
-						<textarea class="input-xxlarge" id="textarea" rows="3" placeholder="Enter a detailed description for the project"></textarea>
-						<span class="help-inline">Only alphanumeric characters allowed!</span>
+							<label>Description</label>
+							<textarea class="input-xxlarge" id="textarea" rows="3" placeholder="Enter a detailed description for the project"></textarea>
+							<span class="help-inline">Only alphanumeric characters allowed!</span>
+							<br>
+							<br>
+							<!--a id="removeMilestone-1" class="btn btn-danger remove_milestone" href="#" onclick="remove_milestone(this); return false;"><i class="icon-trash icon-white"></i> Remove this milestone</a -->
+							<br>
+						</div>
 					</div>
+					<br>
 					<br>
 					<a id="add_milestone" class="btn btn-warning" href="#"><i class="icon-plus icon-white"></i> Add Milestone</a>
 					<br>
@@ -97,8 +104,18 @@
 		</section>
 	</body>
 <script>
-	$('#add_milestone').click(function(){
-		$('#milestones').after("<h1>miau</h1>");
-	});
+		indice = 1;
+		/*function remove_milestone (index) {
+
+			console.log(index.id.parent.id);
+			alert($(index.id.parentNode.id));
+		}*/
+
+		$("#add_milestone").click(function(event){
+			indice += 1;
+			event.preventDefault();
+			$("#milestones").append('<div id="milestone-'+indice+'"><h4>Milestones</h4><br><label>Number</label><input type="number" class="span3" placeholder="Enter a number for this milestone"><span class="help-inline">Only numeric characters allowed!</span><label>Version</label><input type="text" class="span3" placeholder="Initial version"><span class="help-inline">Only alphanumeric characters allowed!</span><label>Description</label><textarea class="input-xxlarge" id="textarea" rows="3" placeholder="Enter a detailed description for the project"></textarea><span class="help-inline">Only alphanumeric characters allowed!</span><br><br><!--a id="removeMilestone-'+indice+'" class="btn btn-danger remove_milestone" href="#" onclick="remove_milestone(); return false;"><i class="icon-trash icon-white"></i> Remove this milestone</a--><br></div>');
+		});
+	
 </script>
 </html>
