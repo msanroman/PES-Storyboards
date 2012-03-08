@@ -22,17 +22,6 @@
 	    <script src="js/bootstrap-button.js"></script>
 
 
-		<script>
-			$(document).ready(function(){
-				$('.tabs').button();
-				$('#seleccionar').click(function(event){
-					$('#alert-success').css('display','block');
-			  		$(this).disable();
-				});
-
-			});
-
-		</script>
 
 
 	</head>
@@ -108,13 +97,28 @@
 			</div>
 			<div class="row">
 				<div class="span2 offset10">
-					<button id="seleccionar" class="btn btn-primary btn-large" data-complete-text="finished!" data-toggle-text="button">
+					<button id="seleccionar" class="btn btn-primary btn-large" data-complete-text="Finished!" data-toggle-text="button">
 						Seleccionar
 					</button>
-
 				</div>
 			</div>
 		</section>
+		<footer>
+			<script>
+				$(document).ready(function(){
+					$().button();
+					$('#alert-success').hide();
+					$('#seleccionar').click(function(event){
+						$(this).button('complete');
+						$(this).removeClass('active');
+						$(this).addClass('disabled');
+						$('#alert-success').fadeIn('slow');
+					});
+
+				});
+
+			</script>
+		</footer>
 	</body>
 	
 </html>
