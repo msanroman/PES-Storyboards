@@ -58,22 +58,27 @@
 			</section>
 			<br />
 
-			<div class="alert alert-info container">
+			<div id="alert-new" class="alert alert-info container">
 				<a class="close" data-dismiss="alert">×</a>
-  				<h4 class="alert-heading">Felicitats!</h4>
-  				<p>T'han seleccionat per un projecte!!</p>
+  				<h4 class="alert-heading">Felicitats! T'han seleccionat per un projecte!!</h4>
+  				<h3><a href="#">Ice-creamed cupcakes</a></h3>
   				<div class="row">
-  					<a class="span3 offset 8" href="">Veure la fitxa del projecte</a>
+  					<div class="span7">
+  						
+  						<p>Jujubes cotton candy gummi bears brownie powder marzipan. Bear claw donut liquorice sweet roll. Gummi bears muffin caramels pie jelly-o dragée...</p>
+  					</div>
+  					
+  					<a class="btn btn-info span3 offset1" href="#">Veure la fitxa del projecte</a>
   				</div>
   				
   				<p>
-  					<a class="btn btn-success" href="">Acceptar</a>
-  					<a class="btn btn-danger" href="">Rebutjar</a>
+  					<a id="acceptar" class="btn btn-success" href="">Acceptar</a>
+  					<a id="rebutjar" class="btn btn-danger" href="">Rebutjar</a>
   				</p>
 			</div>
 
 			<br />
-			<h4>Projectes publicats</h4>
+			<h4>Projectes actius</h4>
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -83,21 +88,21 @@
 					</tr>
 				</thead>
 				<tbody>
+					<tr class="new-project">
+						<td>2</td>
+						<td><a href="#">Ice-creamed cupcakes</a></td>
+						<td style="width: 500px;">Jujubes cotton candy gummi bears brownie powder marzipan. Bear claw donut liquorice sweet roll. Gummi bears muffin caramels pie jelly-o dragée. Marzipan croissant chocolate oat cake danish topping sesame snaps topping. Bear claw tart jelly-o. Cake gummi bears chocolate bar gummi bears halvah marzipan brownie. Pudding tiramisu donut faworki dragée.</td>
+					</tr>
 					<tr>
 						<td>1</td>
 						<td><a href="#">BMX Website</a></td>
 						<td style="width: 500px;">Carrot cake marshmallow biscuit bear claw. Sesame snaps muffin halvah cake. Sweet roll macaroon caramels marzipan cheesecake powder carrot cake. Candy tiramisu tart toffee fruitcake. Donut cake carrot cake sweet cake cake oat cake icing. Ice cream wypas croissant jujubes chocolate muffin pudding. Sugar plum jelly-o carrot cake macaroon. Carrot cake pastry soufflé chocolate bar</td>
 					</tr>
-					<tr>
-						<td>2</td>
-						<td><a href="#">Ice-creamed cupcakes</a></td>
-						<td style="width: 500px;">Jujubes cotton candy gummi bears brownie powder marzipan. Bear claw donut liquorice sweet roll. Gummi bears muffin caramels pie jelly-o dragée. Marzipan croissant chocolate oat cake danish topping sesame snaps topping. Bear claw tart jelly-o. Cake gummi bears chocolate bar gummi bears halvah marzipan brownie. Pudding tiramisu donut faworki dragée.</td>
-					</tr>
 				</tbody>
 			</table>
 			<br>
 			<br>
-			<h4>Projectes pendents de confirmació</h4>
+			<h4>Projectes acabats</h4>
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -120,7 +125,7 @@
 			</table>
 			<br>
 			<br>
-			<h4>Projectes actius</h4>
+			<h4>Projectes abandonats</h4>
 			<table class="table table-striped">
 				<thead>
 					<tr>
@@ -166,3 +171,19 @@
 			</table>
 		</section>
 </div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$().button();
+		$('.new-project').hide();
+		$('#acceptar').click(function(event){
+			$('#alert-new').fadeOut('slow');
+			$('.new-project').fadeIn('slow');
+			event.preventDefault();
+		});
+		$('#rebutjar').click(function(event){
+			$('#alert-new').fadeOut('slow');
+			event.preventDefault();
+		});
+	});
+</script>
