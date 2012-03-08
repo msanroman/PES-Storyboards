@@ -19,6 +19,7 @@
 	    
 	    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	    <script src="js/bootstrap.js"></script>
+	    <script src="js/bootstrap-alert.js"></script>
 	</head>
 
 	<body>
@@ -32,8 +33,11 @@
 							<li>
 								<a href="index.html">Inici</a>
 							</li>
-							<li class="active">
-								<a href="seleccionar-freelance.html">Els meus projectes</a>
+							<li>
+								<a href="project_list.html">Cercar projectes</a>
+							</li>
+							<li>
+								<a href="my_projects_freelance.html">Els meus projectes</a>
 							</li>
 							<li>
 								<a href="#">Sortir</a>
@@ -52,8 +56,23 @@
 			<section class="hero-unit">
 				<h1>Els meus projectes:</h1>
 			</section>
-			<br>
-			<br>
+			<br />
+
+			<div class="alert alert-info container">
+				<a class="close" data-dismiss="alert">×</a>
+  				<h4 class="alert-heading">Felicitats!</h4>
+  				<p>T'han seleccionat per un projecte!!</p>
+  				<div class="row">
+  					<a class="span3 offset 8" href="">Veure la fitxa del projecte</a>
+  				</div>
+  				
+  				<p>
+  					<a class="btn btn-success" href="">Acceptar</a>
+  					<a class="btn btn-danger" href="">Rebutjar</a>
+  				</p>
+			</div>
+
+			<br />
 			<h4>Projectes publicats</h4>
 			<table class="table table-striped">
 				<thead>
