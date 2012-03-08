@@ -17,8 +17,24 @@
 	    <!-- Fav and touch icons -->
 	    
 	    
-	    <script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+	    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	    <script src="js/bootstrap.js"></script>
+	    <script src="js/bootstrap-button.js"></script>
+
+
+		<script>
+			$(document).ready(function(){
+				$('.tabs').button();
+				$('#seleccionar').click(function(event){
+					$('#alert-success').css('display','block');
+			  		$(this).disable();
+				});
+
+			});
+
+		</script>
+
+
 	</head>
 	<body>
 		<nav class="navbar">
@@ -52,6 +68,13 @@
 			<section class="hero-unit">
 				<h1>Mark Otto</h1>
 			</section>
+
+			<div id="alert-success" class="alert alert-success" style="display:none;">
+				<a class="close" data-dismiss="alert">×</a>
+ 				<h4 class="alert-heading">Freelance seleccionat!</h4>
+  				Has seleccionat correctament aquest freelance per al teu projecte.
+			</div>
+
 			<div class="row">
 				<div class="span4">
 					<img class="thumbnail" src="img/userAvatar1.jpeg">
@@ -85,11 +108,13 @@
 			</div>
 			<div class="row">
 				<div class="span2 offset10">
-					<a href="" class="btn btn-primary btn-large">
+					<button id="seleccionar" class="btn btn-primary btn-large" data-complete-text="finished!" data-toggle-text="button">
 						Seleccionar
-					</a>
+					</button>
+
 				</div>
 			</div>
 		</section>
 	</body>
+	
 </html>
