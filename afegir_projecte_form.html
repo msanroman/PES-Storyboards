@@ -16,106 +16,104 @@
 
 	    <!-- Fav and touch icons -->
 	    
-	    
+	    <!-- incloure l'arxiu de utils javascript -->
+	    <script src="js/utils.js"></script>
+
 	    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	    <script src="js/bootstrap-alert.js"
+	    <script src="js/bootstrap-alert.js"></script>
 	    <script src="js/bootstrap.js"></script>
 	</head>
 
 	<body>
 
 		<nav class="navbar">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="brand" href="index.html">Online freelancing</a>
-					<div class="nav-collapse">
-						<ul class="nav">
-							<li>
-								<a href="index.html">Home</a>
-							</li>
-							<li class="active">
-								<a href="afegir_projecte_form.html">Add Project</a>
-							</li>
-							<li>
-								<a href="#">Log Out</a>
-							</li>
-						</ul>
-						<form class="navbar-search pull-left" action>
-							<input type="text" class="search-query span2" placeholder="Search">
-						</form>
-					</div>
-				</div>
-			</div>
+			
 		</nav>
 
 		<section class="container">
 			<section class="center span8">
-				<h1>Add a project</h1>
+				<h1>Afegir un projecte</h1>
 				<br>
 				<br>
 				<form class="well form-vertical">
-					<label>Title</label>
-					<input type="text" class="span3" placeholder="Enter a name for the project">
-					<span class="help-inline">Only alphanumeric characters allowed!</span>
+					<label>Nom</label>
+					<input type="text" class="span3" placeholder="Escriu un nom pel projecte">
+					<span class="help-inline">Només caràcters alfanumèrics permesos!</span>
 					
-					<label>Version</label>
-					<input type="text" class="span3" placeholder="Initial version">
-					<span class="help-inline">Only alphanumeric characters allowed!</span>
+					<label>Versió</label>
+					<input type="text" class="span3" placeholder="Versió inicial">
+					<span class="help-inline">Només caràcters alfanumèrics permesos!</span>
 
-					<label>Description</label>
-					<textarea class="input-xxlarge" id="textarea" rows="3" placeholder="Enter a detailed description for the project"></textarea>
-					<span class="help-inline">Only alphanumeric characters allowed!</span>
+					<label>Descripció</label>
+					<textarea class="input-xxlarge" id="textarea" rows="3" placeholder="Escriu una descripció detallada del projecte"></textarea>
+					<span class="help-inline">Només caràcters alfanumèrics permesos!</span>
 					
 					<br>
 					<br>
 					<div id="milestones">
+						<h4>Fites</h4>
 						<div id="milestone-1">
-							<h4>Milestones</h4>
 							<br>
-							<label>Number</label>
-							<input type="number" class="span3" placeholder="Enter a number for this milestone">
-							<span class="help-inline">Only numeric characters allowed!</span>
-							
-							<label>Version</label>
-							<input type="text" class="span3" placeholder="Initial version">
-							<span class="help-inline">Only alphanumeric characters allowed!</span>
+							<label>Numero</label>
+							<input type="number" class="span3" placeholder="Entra un nombre per a la fita">
+							<span class="help-inline">Només caràcters numèrics permesos!</span>
 
-							<label>Description</label>
-							<textarea class="input-xxlarge" id="textarea" rows="3" placeholder="Enter a detailed description for the project"></textarea>
-							<span class="help-inline">Only alphanumeric characters allowed!</span>
+							<label>Import</label>
+							<input type="number" class="import span3" placeholder="Entra un import per a la fita">
+							<span class="help-inline">Només caràcters numèrics permesos!</span>
+							
+							<label>Descripció</label>
+							<textarea class="input-xxlarge" id="textarea" rows="3" placeholder="Escriu una descripció detallada de la fita"></textarea>
+							<span class="help-inline">Només caràcters alfanumèrics permesos!</span>
 							<br>
 							<br>
-							<!--a id="removeMilestone-1" class="btn btn-danger remove_milestone" href="#" onclick="remove_milestone(this); return false;"><i class="icon-trash icon-white"></i> Remove this milestone</a -->
+							<a class="btn btn-danger remove_milestone" href="#" onclick="remove_milestone('milestone-1'); return false;"><i class="icon-trash icon-white"></i> Remove this milestone</a>
 							<br>
 						</div>
 					</div>
 					<br>
 					<br>
-					<a id="add_milestone" class="btn btn-warning" href="#"><i class="icon-plus icon-white"></i> Add Milestone</a>
+					<a id="add_milestone" class="btn btn-warning" href="#"><i class="icon-plus icon-white"></i> Afegir fita</a>
 					<br>
 					<br>
 
 					<div class="actions">
-						<button type="submit" class="btn btn-success">Submit</button>
+						<button type="submit" class="btn btn-success">Envia</button>
 						<button type="reset" value="Reset" class="btn">Reset</button>
 					</div>
 				</form>
 			</section>
 		</section>
+		<a onclick="refresh_counter(); return false;">miau</a>
+		<p id="counter">lalalal</p>
 	</body>
 <script>
 		indice = 1;
-		/*function remove_milestone (index) {
 
-			console.log(index.id.parent.id);
-			alert($(index.id.parentNode.id));
-		}*/
+		function remove_milestone(id) {
+			$(id).remove();
+		}
+
+		function refresh_counter() {
+			var sum = 0;
+			$(".import").each(function() {
+				//alert( !isNaN($(this).val()));
+				if( (!isNaN( $(this).val() ) ) && ( $(this).val() != null ) && ( $(this).val() != "" ) ) sum += parseInt($(this).val());
+			});
+			$("#counter").html(sum);
+		}
 
 		$("#add_milestone").click(function(event){
 			indice += 1;
 			event.preventDefault();
-			$("#milestones").append('<div id="milestone-'+indice+'"><h4>Milestones</h4><br><label>Number</label><input type="number" class="span3" placeholder="Enter a number for this milestone"><span class="help-inline">Only numeric characters allowed!</span><label>Version</label><input type="text" class="span3" placeholder="Initial version"><span class="help-inline">Only alphanumeric characters allowed!</span><label>Description</label><textarea class="input-xxlarge" id="textarea" rows="3" placeholder="Enter a detailed description for the project"></textarea><span class="help-inline">Only alphanumeric characters allowed!</span><br><br><!--a id="removeMilestone-'+indice+'" class="btn btn-danger remove_milestone" href="#" onclick="remove_milestone(); return false;"><i class="icon-trash icon-white"></i> Remove this milestone</a--><br></div>');
+			$("#milestones").append('<div id="milestone-'+indice+'"><br><label>Numero</label><input type="number" class="span3" placeholder="Entra un nombre per a la fita"><span class="help-inline">Només caràcters numèrics permesos!</span><label>Import</label><input type="number" class="import span3" placeholder="Entra un import per a la fita"><span class="help-inline">Només caràcters numèrics permesos!</span><label>Descripció</label><textarea class="input-xxlarge" id="textarea" rows="3" placeholder="Escriu una descripció detallada de la fita"></textarea><span class="help-inline">Només caràcters alfanumèrics permesos!</span><br><br><a class="btn btn-danger remove_milestone" href="#" onclick="remove_milestone("milestone-'+indice+'"); return false;"><i class="icon-trash icon-white"></i> Remove this milestone</a><br></div>');
+			refresh_counter();
 		});
+
+		$(document).ready(function(){
+			inserta_head_contractant();
+		});
+		
 	
 </script>
 </html>
