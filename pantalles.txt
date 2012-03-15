@@ -8,7 +8,7 @@ Pantalles per fer:
 	- acceptar projecte - DONE
 
 	
-- detall de projecte (contractant)
+- detall de projecte (contractant) jose
 	- botó escollir freelance
 	- acceptar fita assolida
 
