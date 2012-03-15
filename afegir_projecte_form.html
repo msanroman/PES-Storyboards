@@ -59,7 +59,7 @@
 							<span class="help-inline">Només caràcters numèrics permesos!</span>
 
 							<label>Import</label>
-							<input type="number" class="import span3" placeholder="Entra un import per a la fita">
+							<input type="number" class="import span3" placeholder="Entra un import per a la fita" onchange="refresh_counter();">
 							<span class="help-inline">Només caràcters numèrics permesos!</span>
 							
 							<label>Descripció</label>
@@ -73,10 +73,15 @@
 					</div>
 					<br>
 					<br>
+					<div style="float:right;">
+						<label>Import total del projecte</label>
+						<input id="counter" type="text" class="span3" placeholder="Quantitat total" readonly="readonly">
+					</div>
 					<a id="add_milestone" class="btn btn-warning" href="#"><i class="icon-plus icon-white"></i> Afegir fita</a>
 					<br>
 					<br>
-
+					<br>
+					<br>
 					<div class="actions">
 						<button type="submit" class="btn btn-success">Envia</button>
 						<button type="reset" value="Reset" class="btn">Reset</button>
@@ -84,14 +89,13 @@
 				</form>
 			</section>
 		</section>
-		<a onclick="refresh_counter(); return false;">miau</a>
-		<p id="counter">lalalal</p>
 	</body>
 <script>
 		indice = 1;
 
 		function remove_milestone(id) {
-			$(id).remove();
+			$('#'+id).remove();
+			refresh_counter();
 		}
 
 		function refresh_counter() {
@@ -100,14 +104,13 @@
 				//alert( !isNaN($(this).val()));
 				if( (!isNaN( $(this).val() ) ) && ( $(this).val() != null ) && ( $(this).val() != "" ) ) sum += parseInt($(this).val());
 			});
-			$("#counter").html(sum);
+			$("#counter").val(sum);
 		}
 
 		$("#add_milestone").click(function(event){
 			indice += 1;
 			event.preventDefault();
-			$("#milestones").append('<div id="milestone-'+indice+'"><br><label>Numero</label><input type="number" class="span3" placeholder="Entra un nombre per a la fita"><span class="help-inline">Només caràcters numèrics permesos!</span><label>Import</label><input type="number" class="import span3" placeholder="Entra un import per a la fita"><span class="help-inline">Només caràcters numèrics permesos!</span><label>Descripció</label><textarea class="input-xxlarge" id="textarea" rows="3" placeholder="Escriu una descripció detallada de la fita"></textarea><span class="help-inline">Només caràcters alfanumèrics permesos!</span><br><br><a class="btn btn-danger remove_milestone" href="#" onclick="remove_milestone("milestone-'+indice+'"); return false;"><i class="icon-trash icon-white"></i> Remove this milestone</a><br></div>');
-			refresh_counter();
+			$("#milestones").append('<div id="milestone-'+indice+'"><br><label>Numero</label><input type="number" class="span3" placeholder="Entra un nombre per a la fita"><span class="help-inline">Només caràcters numèrics permesos!</span><label>Import</label><input type="number" class="import span3" placeholder="Entra un import per a la fita" onchange="refresh_counter();"><span class="help-inline">Només caràcters numèrics permesos!</span><label>Descripció</label><textarea class="input-xxlarge" id="textarea" rows="3" placeholder="Escriu una descripció detallada de la fita"></textarea><span class="help-inline">Només caràcters alfanumèrics permesos!</span><br><br><a class="btn btn-danger remove_milestone" href="#" onclick="remove_milestone(\'milestone-'+indice+'\'); return false;"><i class="icon-trash icon-white"></i> Remove this milestone</a><br></div>');
 		});
 
 		$(document).ready(function(){
