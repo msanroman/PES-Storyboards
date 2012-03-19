@@ -57,23 +57,42 @@
 				</div>
 			</div>
 			<div id="milestones">
-						<h4>Fites</h4>
-						<div id="fita-1">
-							<br>
-							<label>Numero</label>
-							<input type="text" class="span3" placeholder="Entra un nombre per a la fita" readonly="readonly">
+				<h4>Fites</h4>
+				<div id="fita-1">
+					<br>
+					<label>Numero</label>
+					<input type="text" class="span3" placeholder="Entra un nombre per a la fita" readonly="readonly">
 
-							<label>Import</label>
-							<input type="text" class="import span3" placeholder="Entra un import per a la fita" onchange="refresh_counter();" readonly="readonly">
-							
-							<label>Descripció</label>
-							<textarea class="input-xxlarge" id="textarea" rows="3" placeholder="Escriu una descripció detallada de la fita" readonly="readonly">Loooorem ipsuuuuum</textarea>
-							<br>
-							<br>
-							<a class="btn btn-success remove_milestone" href="#" onclick="$('#fita-1').fadeOut('slow');"><i class="icon-ok icon-white"></i> Acceptar aquesta fita</a>
-							<br>
-						</div>
-					</div>
+					<label>Import</label>
+					<input type="text" class="import span3" placeholder="Entra un import per a la fita" onchange="refresh_counter();" readonly="readonly">
+					
+					<label>Descripció</label>
+					<textarea class="input-xxlarge" id="textarea" rows="3" placeholder="Escriu una descripció detallada de la fita" readonly="readonly">Loooorem ipsuuuuum</textarea>
+					<br>
+					<br>
+					<a class="btn btn-success remove_milestone" href="#" onclick="$('#fita-1').fadeOut('slow');"><i class="icon-ok icon-white"></i> Acceptar aquesta fita</a>
+					<br>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div id="alert-new" class="alert alert-info container" style="float: left; width: 40%;">
+				<a class="close" data-dismiss="alert">×</a>
+  				<h4 class="alert-heading">S'ha oferit per aquest projecte.</h4>
+  				<h3><a href="#">Mark Otto</a></h3>
+  				<div class="row" >
+  					<div class="span7">
+  						<img class="thumbnail" src="img/userAvatar1thumb.jpeg" alt="">
+  						<br>
+	  					<p style="display: block;">
+		  					<a id="acceptar" class="btn btn-success" href="">Acceptar</a>
+		  					<a id="rebutjar" class="btn btn-danger" href="">Rebutjar</a>
+		  				</p>
+  					</div>
+  				</div>
+			</div>
 		</section>
 	</body>
 	<script>

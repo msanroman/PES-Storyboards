@@ -9,8 +9,8 @@ Pantalles per fer:
 
 	
 - detall de projecte (contractant) jose
-	- botó escollir freelance
-	- acceptar fita assolida
+	- botó escollir freelance HALF DONE
+	- acceptar fita assolida HALF DONE
 
 - cerca projectes (freelance)
 
