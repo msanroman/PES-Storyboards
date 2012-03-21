@@ -1,16 +1,20 @@
 Pantalles per fer:
 
-- afegir projecte (contractant) - jose
-- cerca projectes (freelance)
-- detall de projecte (freelance)
-	- botó oferir-se
-	- fites a mig fer
-	- marcar fita com a assolida
+- afegir projecte (contractant) - DONE
 - els meus projectes (contractant) - DONE
-- detall de projecte (contractant)
-	- botó escollir freelance
-	- acceptar fita assolida
 - seleccionar freelance (contractant) - DONE
 - perfil freelance (contractant) - DONE
 - els meus projectes (freelance) - DONE
 	- acceptar projecte - DONE
+
+	
+- detall de projecte (contractant) jose
+	- botó escollir freelance HALF DONE
+	- acceptar fita assolida HALF DONE
+
+- cerca projectes (freelance)
+
+- detall de projecte (freelance)
+	- botó oferir-se
+	- fites a mig fer
+	- marcar fita com a assolida
