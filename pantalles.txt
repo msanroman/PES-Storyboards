@@ -1,4 +1,4 @@
-Pantalles per fer:
+﻿Pantalles per fer:
 
 - afegir projecte (contractant) - DONE
 - els meus projectes (contractant) - DONE
@@ -12,9 +12,9 @@ Pantalles per fer:
 	- botó escollir freelance HALF DONE
 	- acceptar fita assolida HALF DONE
 
-- cerca projectes (freelance)
+- cerca projectes (freelance) HALF DONE
 
 - detall de projecte (freelance)
-	- botó oferir-se
-	- fites a mig fer
-	- marcar fita com a assolida
+	- botó oferir-se DONE
+	- fites a mig fer 
+	- marcar fita com a assolida 
