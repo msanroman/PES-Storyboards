@@ -8,9 +8,9 @@
 	- acceptar projecte - DONE
 
 	
-- detall de projecte (contractant) jose
-	- botó escollir freelance HALF DONE
-	- acceptar fita assolida HALF DONE
+- detall de projecte (contractant) jose DONE
+	- botó escollir freelance DONE
+	- acceptar fita assolida DONE
 
 - cerca projectes (freelance) HALF DONE
 
