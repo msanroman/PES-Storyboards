@@ -56,6 +56,23 @@
 					</dl>
 				</div>
 			</div>
+			<div id="milestones">
+				<h4>Fites</h4>
+				<div id="fita-1">
+					<br>
+					<label>Numero</label>
+					<input type="text" class="span3" placeholder="" value="1" readonly="readonly">
+
+					<label>Import</label>
+					<input type="text" class="import span3" placeholder="300 €" onchange="refresh_counter();" value="300 €" readonly="readonly">
+					
+					<label>Descripció</label>
+					<textarea class="input-large" id="textarea" rows="3" placeholder="Escriu una descripció detallada de la fita" readonly="readonly">S'ha de fer X, Y, Z</textarea>
+					<br>
+					<br>
+					<a class="btn btn-success remove_milestone"  onclick="$('#fita-1').fadeOut('slow');"><i class="icon-ok icon-white"></i> Finalitzar aquesta fita</a>
+				</div>
+			</div>
 			<div class="row">
 				<div class="span2 offset10">
 					<a href="" class="btn btn-primary btn-large">

@@ -16,5 +16,5 @@
 
 - detall de projecte (freelance)
 	- botó oferir-se DONE
-	- fites a mig fer 
-	- marcar fita com a assolida 
+	- fites a mig fer DONE
+	- marcar fita com a assolida DONE
