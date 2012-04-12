@@ -13,10 +13,13 @@
 
 	    <!-- Styles -->
 	    <link href="css/bootstrap.css" rel="stylesheet">
-
+	    
 	    <!-- Fav and touch icons -->
+
+	    <!-- incloure l'arxiu de utils javascript -->
+	    <script src="js/utils.js"></script>
 	    
-	    
+
 	    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	    <script src="js/bootstrap.js"></script>
 	</head>
@@ -24,27 +27,7 @@
 	<body>
 
 		<nav class="navbar">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="brand" href="index.html">Online freelancing</a>
-					<div class="nav-collapse">
-						<ul class="nav">
-							<li>
-								<a href="index.html">Inici</a>
-							</li>
-							<li class="active">
-								<a href="project_list.html">Search Projects</a>
-							</li>
-							<li>
-								<a href="#">Log Out</a>
-							</li>
-						</ul>
-						<form class="navbar-search pull-left" action>
-							<input type="text" class="search-query span2" placeholder="Search">
-						</form>
-					</div>
-				</div>
-			</div>
+			
 		</nav>
 
 		<section class="container">
@@ -57,7 +40,7 @@
 				<thead>
 					<tr>
 						<th>#</th>
-						<th>Job</th>
+						<th>Project Name</th>
 						<th>Salary</th>
 						<th>Corp</th>
 						<th>Skills</th>
@@ -67,7 +50,7 @@
 					<tr>
 						
 						<td>1</td>
-						<td><a href="#">JS programmer</a></td>
+						<td><a href="projecte_detall_versio_freelance.html">Cucumber project</a></td>
 						<td>3000 €</td>
 						<td>Timofónica</td>
 						<td>JS, node.JS</td>
@@ -75,21 +58,21 @@
 					</tr>
 					<tr>
 						<td>2</td>
-						<td><a href="#">Web programmer</a></td>
+						<td><a href="projecte_detall_versio_freelance.html">Carrot Enterprise's project</a></td>
 						<td>2500 €</td>
 						<td>Soft gilatto</td>
 						<td>JS, Ajax, jQuery</td>
 					</tr>
 					<tr>
 						<td>3</td>
-						<td><a href="#">DB Admin</a></td>
+						<td><a href="projecte_detall_versio_freelance.html">Salad masters paperwork</a></td>
 						<td>3000 €</td>
 						<td>Oraggle</td>
 						<td>SQL, MongoDB</td>
 					</tr>
 					<tr>
 						<td>4</td>
-						<td><a href="#">Chief Gastronomical Officer</a></td>
+						<td><a href="projecte_detall_versio_freelance.html">Eggplant webpage</a></td>
 						<td>6000 €</td>
 						<td>Cucumber Inc</td>
 						<td>Cucumber, Cake, CoffeeScript, Python</td>
@@ -98,3 +81,10 @@
 			</table>
 		</section>
 </div>
+</body>
+<script>
+	$(document).ready(function() {
+		inserta_head_freelance();
+		inserta_footer();
+	});
+</script>
