@@ -16,6 +16,8 @@
 
 	    <!-- Fav and touch icons -->
 	    
+	    <!-- incloure l'arxiu de utils javascript -->
+	    <script src="js/utils.js"></script>
 	    
 	    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	    <script src="js/bootstrap-alert.js"
@@ -89,5 +91,12 @@
 			</section>
 		</section>
 	</body>
-
+<script>
+	$(document).ready(function() {
+		inserta_head_home();
+		$(".nav-collapse .nav li:first").removeClass("active");
+		$(".nav-collapse .nav li:eq(1)").addClass("active");
+		inserta_footer();
+	});
+</script>
 </html>
