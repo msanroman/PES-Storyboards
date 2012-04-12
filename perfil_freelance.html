@@ -16,6 +16,8 @@
 
 	    <!-- Fav and touch icons -->
 	    
+	    <!-- incloure l'arxiu de utils javascript -->
+	    <script src="js/utils.js"></script>
 	    
 	    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	    <script src="js/bootstrap.js"></script>
@@ -106,6 +108,10 @@
 		<footer>
 			<script>
 				$(document).ready(function(){
+
+					inserta_head_freelance();
+					inserta_footer();
+
 					$().button();
 					$('#alert-success').hide();
 					$('#seleccionar').click(function(event){
