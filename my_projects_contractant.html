@@ -16,6 +16,8 @@
 
 	    <!-- Fav and touch icons -->
 	    
+	    <!-- incloure l'arxiu de utils javascript -->
+	    <script src="js/utils.js"></script>
 	    
 	    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	    <script src="js/bootstrap.js"></script>
@@ -24,27 +26,7 @@
 	<body>
 
 		<nav class="navbar">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="brand" href="index.html">Online freelancing</a>
-					<div class="nav-collapse">
-						<ul class="nav">
-							<li>
-								<a href="index.html">Inici</a>
-							</li>
-							<li class="active">
-								<a href="">Els meus projectes</a>
-							</li>
-							<li>
-								<a href="#">Sortir</a>
-							</li>
-						</ul>
-						<form class="navbar-search pull-left" action>
-							<input type="text" class="search-query span2" placeholder="Cerca">
-						</form>
-					</div>
-				</div>
-			</div>
+			
 		</nav>
 
 		<section class="container">
@@ -66,12 +48,12 @@
 				<tbody>
 					<tr>
 						<td>1</td>
-						<td><a href="#">BMX Website</a></td>
+						<td><a href="projecte_detall_versio_contractant.html">BMX Website</a></td>
 						<td style="width: 500px;">Carrot cake marshmallow biscuit bear claw. Sesame snaps muffin halvah cake. Sweet roll macaroon caramels marzipan cheesecake powder carrot cake. Candy tiramisu tart toffee fruitcake. Donut cake carrot cake sweet cake cake oat cake icing. Ice cream wypas croissant jujubes chocolate muffin pudding. Sugar plum jelly-o carrot cake macaroon. Carrot cake pastry soufflé chocolate bar</td>
 					</tr>
 					<tr>
 						<td>2</td>
-						<td><a href="#">Ice-creamed cupcakes</a></td>
+						<td><a href="projecte_detall_versio_contractant.html">Ice-creamed cupcakes</a></td>
 						<td style="width: 500px;">Jujubes cotton candy gummi bears brownie powder marzipan. Bear claw donut liquorice sweet roll. Gummi bears muffin caramels pie jelly-o dragée. Marzipan croissant chocolate oat cake danish topping sesame snaps topping. Bear claw tart jelly-o. Cake gummi bears chocolate bar gummi bears halvah marzipan brownie. Pudding tiramisu donut faworki dragée.</td>
 					</tr>
 				</tbody>
@@ -90,12 +72,12 @@
 				<tbody>
 					<tr>
 						<td>1</td>
-						<td><a href="#">BMX Website</a></td>
+						<td><a href="projecte_detall_versio_contractant.html">BMX Website</a></td>
 						<td style="width: 500px;">Sugar plum jelly-o carrot cake macaroon. Carrot cake pastry soufflé chocolate bar</td>
 					</tr>
 					<tr>
 						<td>2</td>
-						<td><a href="#">Ice-creamed cupcakes</a></td>
+						<td><a href="projecte_detall_versio_contractant.html">Ice-creamed cupcakes</a></td>
 						<td style="width: 500px;">Pudding tiramisu donut faworki dragée.</td>
 					</tr>
 			</table>
@@ -113,12 +95,12 @@
 				<tbody>
 					<tr>
 						<td>1</td>
-						<td><a href="#">BMX Website</a></td>
+						<td><a href="projecte_detall_versio_contractant.html">BMX Website</a></td>
 						<td style="width: 500px;">Candy tiramisu tart toffee fruitcake.</td>
 					</tr>
 					<tr>
 						<td>2</td>
-						<td><a href="#">Ice-creamed cupcakes</a></td>
+						<td><a href="projecte_detall_versio_contractant.html">Ice-creamed cupcakes</a></td>
 						<td style="width: 500px;">Pudding tiramisu donut faworki dragée.</td>
 					</tr>
 			</table>
@@ -136,14 +118,20 @@
 				<tbody>
 					<tr>
 						<td>1</td>
-						<td><a href="#">BMX Website</a></td>
+						<td><a href="projecte_detall_versio_contractant.html">BMX Website</a></td>
 						<td style="width: 500px;">Carrot cake marshmallow biscuit bear claw.</td>
 					</tr>
 					<tr>
 						<td>2</td>
-						<td><a href="#">Ice-creamed cupcakes</a></td>
+						<td><a href="projecte_detall_versio_contractant.html">Ice-creamed cupcakes</a></td>
 						<td style="width: 500px;">Bear claw tart jelly-o. Pudding tiramisu donut faworki dragée.</td>
 					</tr>
 			</table>
 		</section>
-</div>
+</body>
+<script>
+	$(document).ready(function() {
+		inserta_head_contractant();
+		inserta_footer();
+	});
+</script>
